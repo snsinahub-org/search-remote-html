@@ -10,7 +10,7 @@ async function run() {
     const search = core.getInput('search');
     console.log(`url: ${url} -- search: ${search}`)
     const html = await axios.get(url);
-    console.log("HTML, ", html)
+    console.log("HTML, ", html.data)
     fs.appendFileSync(process.env.GITHUB_OUTPUT, "found=" + found);
 
     
