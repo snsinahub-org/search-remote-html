@@ -8,6 +8,7 @@ async function run() {
     let found = false
     const url = core.getInput('url');
     const search = core.getInput('search');
+    console.log(`url: ${url} -- search: ${search}`)
     axios.get(url)
          .then(function(response){
             console.log(response)
