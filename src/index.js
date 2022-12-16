@@ -11,7 +11,7 @@ async function run() {
     console.log(`url: ${url} -- search: ${search}`)
     const response = await axios.get(url);
     let html = response.data
-    found = html.search(search)
+    found = html.includes(search)
     console.log("HTML, ", response.data)
     fs.appendFileSync(process.env.GITHUB_OUTPUT, "found=" + found);
 
