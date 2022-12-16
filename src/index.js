@@ -9,7 +9,7 @@ async function run() {
     const url = core.getInput('url');
     const search = core.getInput('search');
     console.log(`url: ${url} -- search: ${search}`)
-    axios.get(url)
+    await axios.get(url)
          .then(function(response){
             console.log(response)
             fs.appendFileSync(process.env.GITHUB_OUTPUT, "found=" + found);
