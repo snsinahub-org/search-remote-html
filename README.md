@@ -23,4 +23,12 @@ This action helps you to search text in a remote html accessible via URL.
   with:
     url: https://example.com
     search: 'domain'
+- name: search result print FOUND
+  if: ${{ steps.search.outputs.found == 'true' }}
+  run: |
+    echo FOUND ${{ steps.search.outputs.found }}
+- name: search result print NOT FOUND
+  if: ${{ steps.search.outputs.found == 'false' }}
+  run: |
+    echo NOT FOUND ${{ steps.search.outputs.found }}
 ```
