@@ -23,7 +23,7 @@ async function run() {
         })
       });
     const response = await instance.get(url);
-    console.log(JSON.stringify(response))
+    console.log("RESPONSE: ", JSON.stringify(response))
     let html = response.data
     found = html.includes(search)
     // console.log("HTML, ", response.data)
