@@ -27,14 +27,14 @@ async function run() {
     });
     // console.log("RESPONSE: ", JSON.stringify(response.statusCode))
     let html = response.data
-    if(response.statusCode != 200) {
+    if(response.status != 200) {
         found = false
     } else {
         found = html.includes(search)
     }
     // console.log("HTML, ", response.data)
     fs.appendFileSync(process.env.GITHUB_OUTPUT, "found=" + found);
-    fs.appendFileSync(process.env.GITHUB_OUTPUT, "httpStatusCode=" + response.statusCode);
+    fs.appendFileSync(process.env.GITHUB_OUTPUT, "httpStatusCode=" + response.status);
 
     
 }
