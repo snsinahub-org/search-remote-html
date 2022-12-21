@@ -11,7 +11,7 @@ async function run() {
     const search = core.getInput('search');
     const ignoreSSL = core.getInput('ignore-ssl');
     console.log(`url: ${url} -- search: ${search}`);
-    const rejectUnauthorized = true
+    let rejectUnauthorized = true
     if(ignoreSSL == 'true') {
         rejectUnauthorized = false
     }
