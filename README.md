@@ -9,6 +9,7 @@ This action helps you to search text in a remote html accessible via URL.
     # Required: true
     url: https://example.com
     search: 'domain'
+    ignore-ssl: true
 ```
 ## Output
 | Name | Type | Expected values |
@@ -23,6 +24,7 @@ This action helps you to search text in a remote html accessible via URL.
   with:
     url: https://example.com
     search: 'domain'
+    ignore-ssl: true
 - name: search result print FOUND
   if: ${{ steps.search.outputs.found == 'true' }}
   run: |
