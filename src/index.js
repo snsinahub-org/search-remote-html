@@ -27,7 +27,9 @@ async function run() {
     // });
     const response = await instance.get(url, {validateStatus: () => true});
     // console.log("RESPONSE: ", JSON.stringify(response.statusCode))
-    console.log("RESPONSE: ", response)
+    // console.log("RESPONSE: ", response)
+
+    console.log("STATUS: ", response.status)
     
     if(response.status != 200) {
         found = 'false'
