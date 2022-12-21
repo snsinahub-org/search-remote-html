@@ -26,6 +26,7 @@ async function run() {
         console.log("ERROR: ", JSON.stringify(error))
     });
     // console.log("RESPONSE: ", JSON.stringify(response.statusCode))
+    console.log("RESPONSE: ", response)
     
     if(response.status != 200) {
         found = false
