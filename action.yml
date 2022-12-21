@@ -7,6 +7,9 @@ inputs:
   search:
     required: true
     default: ''  
+  ignore-ssl:
+    required: false
+    default: false
   
   
 outputs:
