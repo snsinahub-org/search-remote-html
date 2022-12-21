@@ -22,7 +22,9 @@ async function run() {
           rejectUnauthorized: rejectUnauthorized
         })
       });
-    const response = await instance.get(url);
+    const response = await instance.get(url).catch(function(error){
+        console.log("ERROR: ", JSON.stringify(error))
+    });
     console.log("RESPONSE: ", JSON.stringify(response))
     let html = response.data
     found = html.includes(search)
