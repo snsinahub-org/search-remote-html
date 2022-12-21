@@ -26,7 +26,7 @@ async function run() {
     console.log(JSON.stringify(response))
     let html = response.data
     found = html.includes(search)
-    console.log("HTML, ", response.data)
+    // console.log("HTML, ", response.data)
     fs.appendFileSync(process.env.GITHUB_OUTPUT, "found=" + found);
 
     
