@@ -34,7 +34,7 @@ async function run() {
     }
     // console.log("HTML, ", response.data)
     fs.appendFileSync(process.env.GITHUB_OUTPUT, "found=" + found);
-    fs.appendFileSync(process.env.GITHUB_OUTPUT, "http-status-code=" + response.statusCode);
+    fs.appendFileSync(process.env.GITHUB_OUTPUT, "httpStatusCode=" + response.statusCode);
 
     
 }
