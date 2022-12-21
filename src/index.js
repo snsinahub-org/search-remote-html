@@ -30,7 +30,7 @@ async function run() {
     console.log("RESPONSE: ", response)
     
     if(response.status != 200) {
-        found = false
+        found = 'false'
     } else {
         let html = response.data
         found = html.includes(search)
