@@ -26,10 +26,11 @@ async function run() {
         console.log("ERROR: ", JSON.stringify(error))
     });
     // console.log("RESPONSE: ", JSON.stringify(response.statusCode))
-    let html = response.data
+    
     if(response.status != 200) {
         found = false
     } else {
+        let html = response.data
         found = html.includes(search)
     }
     // console.log("HTML, ", response.data)
