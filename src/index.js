@@ -22,9 +22,10 @@ async function run() {
           rejectUnauthorized: rejectUnauthorized
         })
       });
-    const response = await instance.get(url).catch(function(error){
-        console.log("ERROR: ", JSON.stringify(error))
-    });
+    // const response = await instance.get(url).catch(function(error){
+    //     console.log("ERROR: ", JSON.stringify(error))
+    // });
+    const response = await instance.get(url);
     // console.log("RESPONSE: ", JSON.stringify(response.statusCode))
     console.log("RESPONSE: ", response)
     
