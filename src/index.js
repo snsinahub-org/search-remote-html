@@ -25,7 +25,7 @@ async function run() {
     // const response = await instance.get(url).catch(function(error){
     //     console.log("ERROR: ", JSON.stringify(error))
     // });
-    const response = await instance.get(url);
+    const response = await instance.get(url, {validateStatus: () => true});
     // console.log("RESPONSE: ", JSON.stringify(response.statusCode))
     console.log("RESPONSE: ", response)
     
@@ -37,7 +37,7 @@ async function run() {
     }
     // console.log("HTML, ", response.data)
     fs.appendFileSync(process.env.GITHUB_OUTPUT, "found=" + found);
-    // fs.appendFileSync(process.env.GITHUB_OUTPUT, "httpStatusCode=" + response.status);
+    fs.appendFileSync(process.env.GITHUB_OUTPUT, "httpStatusCode=" + response.status);
 
     
 }
