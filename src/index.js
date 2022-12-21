@@ -36,8 +36,10 @@ async function run() {
         found = html.includes(search)
     }
     // console.log("HTML, ", response.data)
-    fs.appendFileSync(process.env.GITHUB_OUTPUT, "\\nfound=" + found);
-    fs.appendFileSync(process.env.GITHUB_OUTPUT, "\\nhttpStatusCode=" + response.status);
+    // fs.appendFileSync(process.env.GITHUB_OUTPUT, "\\nfound=" + found);
+    // fs.appendFileSync(process.env.GITHUB_OUTPUT, "\\nhttpStatusCode=" + response.status);
+    core.setOutput("found", found);
+    core.setOutput("httpStatusCode", response.status);
 
     
 }
