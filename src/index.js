@@ -25,9 +25,13 @@ async function run() {
     const response = await instance.get(url).catch(function(error){
         console.log("ERROR: ", JSON.stringify(error))
     });
-    console.log("RESPONSE: ", JSON.stringify(response))
+    // console.log("RESPONSE: ", JSON.stringify(response.statusCode))
     let html = response.data
-    found = html.includes(search)
+    if(response.statusCode != 200) {
+        found = false
+    } else {
+        found = html.includes(search)
+    }
     // console.log("HTML, ", response.data)
     fs.appendFileSync(process.env.GITHUB_OUTPUT, "found=" + found);
 
