@@ -3,6 +3,7 @@ const github = require('@actions/github');
 const core = require('@actions/core');
 const fs = require('fs');
 const axios = require('axios');
+const https = require('https');
 const axiosRetry = require('axios-retry');
 
 async function run() {
