@@ -3,7 +3,7 @@ This action helps you to search text in a remote html accessible via URL. If cal
 
 ## Inputs
 ```YAML
-- uses: snsinahub-org/search-remote-html@v1.0.0
+- uses: snsinahub-org/search-remote-html@v1.1.0
   id: search
   with:
     # Required: true
@@ -25,7 +25,7 @@ This action helps you to search text in a remote html accessible via URL. If cal
 ## Example
 ```YAML
 - name: search
-  uses: snsinahub-org/search-remote-html@v1.0.0
+  uses: snsinahub-org/search-remote-html@v1.1.0
   id: search
   with:
     url: https://example.com
